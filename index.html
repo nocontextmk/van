@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -76,8 +76,8 @@
       <div class="hero" id="content">
         <div style="position:relative">
           <div class="lang-switch" aria-label="language selector" role="tablist">
-            <button class="lang-btn" data-lang="de" aria-selected="false">DE</button>
-            <button class="lang-btn active" data-lang="en" aria-selected="true">EN</button>
+            <button class="lang-btn active" data-lang="de" aria-selected="true">DE</button>
+            <button class="lang-btn" data-lang="en" aria-selected="false">EN</button>
             <button class="lang-btn" data-lang="fr" aria-selected="false">FR</button>
             <button class="lang-btn" data-lang="it" aria-selected="false">IT</button>
           </div>
@@ -87,7 +87,7 @@
         <section class="lang" data-lang="en" hidden>
           <div class="kicker">Cargo Van — Switzerland</div>
           <h1>Reliable cargo van — flexible hire (no online booking)</h1>
-          <p class="lead">Minimal, professional cargo van available for short or long periods. We don’t accept bookings through the site — to reserve please call or WhatsApp <strong>+41 112 11 34 45</strong>.</p>
+          <p class="lead">Minimal, professional cargo van available for short or long periods. We don't accept bookings through the site — to reserve please call or WhatsApp <strong>+41 112 11 34 45</strong>.</p>
           <ul class="features">
             <li>Clear pricing on request</li>
             <li>Short‑term & hourly options</li>
@@ -196,10 +196,10 @@
 
     btns.forEach(b => b.addEventListener('click', ()=> setLang(b.dataset.lang)));
 
-    // initialize from hash or prefer en
-    const hash = location.hash.replace('#','') || 'de'; const allowed = ['de','en','fr','it'];('#','') || 'en';
+    // initialize from hash or prefer de (German)
+    const hash = location.hash.replace('#','') || 'de';
     const allowed = ['de','en','fr','it'];
-    setLang(allowed.includes(hash) ? hash : 'en', false);
+    setLang(allowed.includes(hash) ? hash : 'de', false);
 
     // Lightweight accessibility improvement: keyboard language switching
     document.addEventListener('keydown', (e)=>{
